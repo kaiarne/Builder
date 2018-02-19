@@ -11,6 +11,7 @@
 
     <properties>
         <bukkit.version>1.12.1-R0.1-SNAPSHOT</bukkit.version>
+        <spigot.version>1.12.1-R0.1-SNAPSHOT</bukkit.version>
         <citizens.version>2.0.22-SNAPSHOT</citizens.version>
         <denizen.version>1.0.2-SNAPSHOT</denizen.version>
     </properties>
@@ -34,8 +35,8 @@
     <!-- Repositories -->
     <repositories>
         <repository>
-            <id>bukkit-repo</id>
-            <url>http://repo.bukkit.org/content/groups/public/</url>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
         <repository>
             <id>everything</id>
@@ -49,15 +50,15 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>${bukkit.version}</version>
-            <type>jar</type>
-            <scope>compile</scope>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <!-- Bukkit API Version, change if out dated -->
+            <version>${spigot.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.bukkit</groupId>
-            <artifactId>craftbukkit</artifactId>
+            <artifactId>bukkit</artifactId>
             <version>${bukkit.version}</version>
             <type>jar</type>
             <scope>compile</scope>
