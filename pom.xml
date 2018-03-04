@@ -10,8 +10,8 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
-        <bukkit.version>1.12.1-R0.1-SNAPSHOT</bukkit.version>
-        <spigot.version>1.12.1-R0.1-SNAPSHOT</spigot.version>
+        <bukkit.version>1.12.2-R0.1-SNAPSHOT</bukkit.version>
+        <spigot.version>1.12.2-R0.1-SNAPSHOT</spigot.version>
         <citizens.version>2.0.22-SNAPSHOT</citizens.version>
         <denizen.version>1.0.2-SNAPSHOT</denizen.version>
     </properties>
@@ -52,6 +52,13 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
+            <!-- Bukkit API Version, change if out dated -->
+            <version>${spigot.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId>
             <!-- Bukkit API Version, change if out dated -->
             <version>${spigot.version}</version>
             <scope>provided</scope>
