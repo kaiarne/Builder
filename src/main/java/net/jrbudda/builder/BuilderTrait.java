@@ -591,6 +591,9 @@ public class BuilderTrait extends Trait implements Toggleable {
                     npc.getNavigator().setTarget(findaspot(pending).add(.5, 1, .5));
                     npc.getNavigator().getLocalParameters().stationaryTicks((int) (MoveTimeout * 20));
                     npc.getNavigator().getLocalParameters().stuckAction(BuilderTeleportStuckAction.INSTANCE);
+                      // fix for no effect of timeout problem?
+		            npc.getNavigator().setPaused(false);
+		            npc.getNavigator().getPathStrategy().update();
                 }
             }
         });
